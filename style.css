@@ -1,0 +1,1645 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@700&family=Open+Sans&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Montserrat:wght@700&family=Open+Sans&family=Roboto+Slab&display=swap');
+/*
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+
+
+a:focus,
+a:active {
+    outline: none;
+
+}
+*/
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,
+:active {
+    outline: none;
+}
+.all-cite{
+   background: #fdfdfd;
+}
+
+.lupa{
+   display: flex;
+   justify-content: space-between;
+   display: inline-block;
+   margin-left: 190px;
+}
+.flex-con {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   min-height: 16px;
+}
+.perenos>button {
+    margin-top: 35px;
+        width: 172px;
+        height: 56px;
+        left: 511px;
+        top: 367px;
+        
+        background: #ffffff;
+        color: #154444;
+        font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: 0.72px;
+        transition: 0.2s;
+    }
+    
+
+.text-frame-1{
+   
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vw;
+    line-height: 25px;
+    color: #ffffff;  
+display: flex;
+    letter-spacing: 0.22px;
+    margin-top: 19px;
+}
+.perenos{
+      width: 60%;
+      padding-left: 6%;
+      
+}
+
+
+.title{
+   
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4vw;
+    line-height: 68px;
+    margin-top: 70px;
+    color: #FFFFFF;   
+
+   
+}
+
+.stul{
+    width: 40%;
+
+    display: flex;
+    object-fit: cover;
+
+}
+.content{
+    flex-wrap: wrap ;
+}
+.rect{   
+    display: flex;
+   
+background: #154444;
+}
+.frame-content{
+   background: #154444;
+}
+*, *:after, *:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: .5s ease-in-out;
+    /* добавим плавность переходов для всех элементов страницы*/
+ }
+ ul {
+    list-style: none;
+ }
+ a {
+    text-decoration: none;
+    outline: none;
+ }
+ img {
+    vertical-align: top;
+}
+ h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    letter-spacing: 1px;
+ }
+ body {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 1;
+    color: #373737;
+    background: #ffffff;
+ }
+ /* добавим очистку потока для всех контейнеров, внутри которых задано обтекание дочерних элементов */
+ header:after, .container:after, footer:after, .widget-posts-list li:after, #subscribe:after {
+    content: "";
+    display: table;
+    clear: both;
+ }
+ /* стилевой класс, который управляет шириной контейнера сетки*/
+ .container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+ }
+ header {
+    width: 100%;
+    background: white;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    position: relative;
+ }
+ /* логотип */
+ .logo{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+color: #244D4D;
+float: left;
+}
+
+ /* меню */
+ #menu {
+    float: right;
+ }
+ #menu li {
+    display: inline-block;
+    margin-right: 30px;
+ }
+ #menu a {
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    display: block;
+    line-height: 40px;
+ }
+ #menu a:hover {
+    color: #ffffff;
+ }
+ #menu li:last-child {
+    margin-right: 0;
+ }
+
+ .nav-toggle {
+    display: none;
+    position: relative;
+    float: right;
+    width: 40px;
+    height: 40px;
+    
+    background: #ffffff;
+    cursor: pointer;
+ }
+ .nav-toggle span {
+    display: flex;
+    position: relative;
+    top: 19px;
+    left: 8px;
+    right: 8px;
+    height: 4px;
+    background: rgb(33, 61, 10);
+    border-radius: 5px;
+ }
+ .nav-toggle span:before, .nav-toggle span:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgb(8, 88, 0);
+    border-radius: 5px;
+ }
+ .nav-toggle span:before {
+    top: -10px;
+ }
+ .nav-toggle span:after {
+    bottom: -10px;
+ }
+ /* класс, который будет добавлен в верхнему меню при нажатии на кнопку и покажет скрытое меню*/
+ #menu.active {
+    max-height: 164px;
+    width: 100%;
+ }
+
+ @media (max-width: 1060px) {
+    /* показываем кнопку для переключения верхней навигации */
+    .nav-toggle {
+       display: block;
+    }
+    header {
+       padding: 10px 0;
+    }
+    /* скрываем верхнее меню, отменяем обтекание, позиционируем его, сместив на высоту шапки сайта */
+    #menu {
+       max-height: 0;
+       background: white;
+       float: none;
+       position: absolute;
+       overflow: hidden;
+       top: 63px;
+       right: 0;
+       left: 0;
+       margin: 0;
+       padding: 0;
+       z-index: 3;
+    }
+    /* делаем элементы списка блочными, чтобы они располагались друг под другом */
+    #menu li {
+       display: block;
+       text-align: center;
+       border-bottom: 1px solid #1e4e0b;
+       margin-right: 0;
+    }
+    /* отменяем обтекание левой и правой колонок, устанавливаем им ширину 100%*/
+    .posts-list, aside {
+       width: 100%;
+       float: none;
+    }
+    .widget-post-title {
+       font-size: 1.5em;
+    }
+ }
+ 
+ @media (max-width: 1050px) {
+    /* отменяем обтекание для логотипа и выравниваем по центру*/
+    .logo {
+       float: none;
+       margin: 0 auto ;
+       display: table;
+    }
+    .logo span {
+       margin: 0 2px;
+    }
+    /* позиционируем меню на увеличившуюся высоту шапки */
+   
+    
+    /* убираем верхнюю и нижнюю границы и выравниваем кнопку по центру */
+    .post-footer {
+       border-top: none;
+       border-bottom: none;
+       text-align: center;
+    }
+    /* отменяем позиционирование кнопок соцсетей */
+    .post-social {
+       position: static;
+       text-align: center;
+       transform: none;
+       margin-top: 20px;
+    }
+    .widget-post-title {
+       font-size: 1.2em;
+    }
+    /* отменяем обтекание для столбцов подвала страницы */
+    .footer-col {
+       float: none;
+       margin-bottom: 20px;
+       width: 100%;
+       text-align: center;
+    }
+    .footer-col:last-child {
+       text-align: center;
+       margin-bottom: 0;
+    }
+ }
+
+
+
+
+ .trusted{
+   padding-top: 110px;
+   text-align: center;
+   font-family: 'DM Sans';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 2.5vw;
+   line-height: 42px;   
+   color: #244D4D;
+ }
+ .diller{
+   display: flex;
+   position: relative;
+   align-items: center;
+   padding-top: 20px;
+
+ }
+ .fraame65{
+   width: 18%;
+   position: relative;
+   padding-right: 6%;
+   padding-left: 6%;
+ }
+ .fraame64,.fraame13,.fraame15{
+   width: 16%;
+   position: relative;
+   padding-right: 6%;
+  
+ }
+
+ .fraame14{
+   width: 16%;
+   position: relative;
+   padding-right: 5%;
+
+ }
+ 
+ .fraame63{
+   width: 11%;
+   position: relative;
+
+ }
+
+ /* 3 frame */
+  .group{
+   width: 50%;
+   height: 100%;
+  }
+  .con3{
+     display: flex;
+     padding-top: 140px ;
+  }
+  .about-us{
+   width: 50%;
+   padding-left: 7%;
+padding-right: 3%;
+   
+  }
+ .about{
+   margin-top: 40px;
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 3vw;
+line-height: 40px;
+color: #244D4D;
+ }
+ .all-of{
+   margin-top: 15px;
+   font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 1.7vw;
+line-height: 25px;
+color: #444444;
+ }
+ .ikonki,.ikonki2,.ikonki3{
+   display: flex;
+   margin-top: 30px;
+ }
+ .best,.sto,.free{
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 2vw;
+line-height: 26px;
+color: #244D4D;
+ }
+.mini-best,.mini-sto,.mmini-free{
+   margin-top: 14px;
+   font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 1.6vw;
+line-height: 26px;
+color: #383738;
+
+}
+.best-quality,.sto-proz,.free-shop{
+   padding-right: 3%;
+   padding-left: 4%;
+}
+.shield,.galka,.gruz{
+   width: 10%;
+   height: 80%;
+}
+
+/*con4*/
+
+.our-pop{
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 3.2vw;
+line-height: 52px;
+text-align: center;
+margin-bottom: 2%;
+color: #242424;
+}
+.mini-our-pop{
+   font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 1.8vw;
+line-height: 27px;
+color: #383738;
+padding-left: 2%;
+}
+.con4{
+   padding-top: 140px;
+}
+.pop-furniture{
+width: 75%;
+
+}
+.our-pop-fur{
+   display: flex;
+}
+.frame86{
+   width:50%;
+   height:85%;
+ margin-right: 10px;
+}
+.frame85{
+   width:50%;
+   height: 85%;
+
+}
+.image-con4{
+   height: 50%;
+   width: 30%;
+   display: flex;
+   padding-left: 15%;
+padding-top: 4%;
+padding-right: 4%;
+}
+.white-svan{
+   display: flex;
+   padding-top: 20px;
+   padding-left: 6% ;
+}
+.niz{
+   display: flex;
+   padding-top: 10px;
+   padding-left: 6% ;
+   padding-bottom: 6%;
+}
+.heart{
+   display: flex;
+   margin-left: 15%;
+   width: 20%;
+   height: 20%;
+}
+.frame41{
+   margin-left: 25%;
+   margin-right: 10%;
+}
+.one-var{
+    background: rgb(255, 255, 255);
+    box-shadow: 10px 20px 100px rgba(255, 0, 0, 0.05);
+    height: 35%;
+    width: 30%;
+    text-align: center;
+
+}
+.frame38,.frame36,.frame34{
+   width: 100%;
+}
+.white{
+   font-family: 'DM Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 1.7vw;
+line-height: 27px;
+color: #242424;
+
+}
+.variantiki{
+   padding-top: 40px;
+   padding-left: 2%;
+   padding-right: 2%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.cena{
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 2vw;
+line-height: 31px;
+color: #154444;
+padding-right: 57%;
+}
+.buy-now{
+ 
+ /*  color: #fff;
+   background: #154444;
+   cursor: pointer;
+   z-index: 0;
+
+       
+        background: #244D4D;
+        color: #ffffff;
+      
+        line-height: 27px;
+        letter-spacing: 0.72px;
+        transition: 0.2s;*/ 
+         width: 75px;
+        height: 30px;
+        
+         font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+        font-size: 0.9vw;
+      
+        line-height: 28px;
+        border-radius: 2px;
+        
+        text-align: center;
+        color: #FFFFFF;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: animate_gradient 5s ease infinite;
+}
+.buy-now:hover {
+	animation: none;
+}
+@keyframes animate_gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/*frame 5 */
+.all-furnit{
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 3vw;
+line-height: 48px;
+color: #242424;
+text-align: center;
+}
+.all-furniture{
+   padding-top: 140px;
+}
+.shop-by{
+   display: flex;
+}
+.room,.category,.style{
+
+   font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 2vw;
+line-height: 27px;
+color: #919090;
+padding-top: 2%;
+padding-bottom: 6%;
+padding-left: 15%;
+}
+.room:last-child,.category:last-child,.style:last-child{
+   margin-right: 0px; 
+}
+.room:hover,.category:hover,.style:hover{
+   color: #154444;
+}
+.room{
+   padding-left: 17%;
+}
+.category{
+   padding-left: 12%;
+}
+.style{
+   padding-left: 12%;
+}
+
+.group8990{
+   width: 50%;
+}
+.knopki {
+   display: flex;
+   
+}
+.rgoup8917{
+   padding-top: 3%;
+}
+.living-room{
+color: #808080;
+padding-top: 3%;
+}
+.living-room1{
+   color: #ffffff;
+   padding-top: 3%;
+}
+.komnatki{
+   padding-left:9%; 
+   padding-top: 2%;
+}
+.button-1{
+   width: 222px;
+   height: 90px;
+   background: #ffffff;
+   font-family: 'DM Sans';
+font-style: normal;
+font-weight: 500;
+   font-size: 1.2vw;
+   line-height: 27px;
+   letter-spacing: 0.72px;
+   transition: 0.2s;
+margin-top: 8%;
+margin-left: 1%;
+}
+.button-2{
+   width: 222px;
+      height: 90px;
+   background: #ffffff;
+   font-family: 'DM Sans';
+font-style: normal;
+font-weight: 500;
+   font-size: 1.2vw;
+   line-height: 27px;
+   letter-spacing: 0.72px;
+   transition: 0.2s;
+   margin-top: 8%;
+   margin-left: 6%;
+}
+.button-3{
+   width: 222px;
+   height: 90px;
+   background: #154444;
+   font-family: 'DM Sans';
+font-style: normal;
+font-weight: 500;
+   font-size: 1.2vw;
+   line-height: 27px;
+   letter-spacing: 0.72px;
+   transition: 0.2s;
+   margin-top: 8%;
+   margin-left: 6%;
+}
+.one-rjad{
+   display: flex;
+   width: 100%;
+}
+
+/*group 6*/
+.group9009{
+    margin-top: 50px;
+    width: 100%;
+}
+.jus-drein{
+   padding-top: 100px;
+   display: flex;
+}
+.our-cust{
+   padding-left: 7%;
+   padding-top: 9%;
+   padding-right: 1%;
+}
+.our{
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 3vw;
+   line-height: 48px;
+   color: #242424;
+}
+.our-mini{
+   font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 1.7vw;
+line-height: 27px;
+color: #383738;
+padding-top: 5%;
+}
+.chuvak{
+   display: flex;
+   padding-top: 6%;
+}
+.name{
+   font-family: 'DM Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 1.5vw;
+line-height: 19px;
+color: #000000;
+}
+.star{
+   display: flex;
+   margin-top: 7%;
+}
+.reiting{
+   font-family: 'DM Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 1.3vw;
+line-height: 15px;
+color: #000000;
+margin-left: 10%;
+margin-top: 2%;
+}
+.jiban{
+   margin-left: 3%;
+}
+
+/*frame 7*/
+.frame-7{
+   background: #F4F6F6;
+   width: 100%;
+   height: 450px;
+   margin-top: 100px;
+}
+.sub{
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 3vw;
+line-height: 48px;
+text-align: center;
+color: #222222;
+padding-top: 7%;
+}
+.lorem{
+   padding-top: 2%;
+   font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 1.4vw;
+line-height: 24px;
+text-align: center;
+color: #222222;
+}
+.form-field{
+   text-align: center;
+   margin-bottom: 1px;
+   font-family: 'DM Sans';
+font-style: normal;
+}
+
+.form-field1{
+   text-align: center;
+   padding-top: 10px;
+   margin-bottom: 10px;
+   font-family: 'DM Sans';
+font-style: normal;
+}
+.text1{
+   color: #154444;
+   width: 90%;
+   height: 100%;
+   font-size: 1.2vw;
+   line-height: 28px;
+   background: #FAFBFE;
+   border: 2px solid #FAFBFE;
+   padding-left: 205px;
+   padding-top: 10%;
+}
+input {
+   color: #154444;
+   width: 90%;
+   height: 100%;
+   font-size: 1.4vw;
+   line-height: 28px;
+   background: #FAFBFE;
+   border: 2px solid #FAFBFE;
+   padding-left: 15px;
+   padding-top: 3%;
+}
+input:focus{
+   border: 2px solid #154444;
+   outline: none;
+}
+.konvert{
+  
+display: block;
+margin: 0 auto;
+}
+.email{
+   margin-top: 4%;
+   border: 2px solid #E6E8F0;
+   background: #FAFBFE;
+   width: 33%;
+   height: 10%;
+   margin-left: 35%;
+   display: flex;
+ 
+}
+/*last frame*/
+.frame-8{
+   background: #407980;
+   margin-top: 100px;
+   display: flex;
+}
+.pravo{
+   padding-left: 2%;
+}
+.znachki{
+   padding-top: 4%;
+padding-left: 2%; 
+padding-bottom: 30%;
+}
+.loremi,.spisok1{
+   font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 1.6vw;
+line-height: 26px;
+color: #FFFFFF;
+padding-top: 10%;
+padding-left: 2%;
+}
+.follow{
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 2.1vw;
+   line-height: 29px;
+   padding-top: 10%;
+   padding-left: 2%;
+   color: #FFFFFF;
+}
+.take{
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 1.8vw;
+   line-height: 29px;
+   padding-top: 70%;
+   padding-left: 2%;
+   color: #FFFFFF;
+}
+.take1{
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 1.8vw;
+   line-height: 29px;
+   padding-top: 30%;
+   padding-left: 2%;
+   color: #FFFFFF;
+}
+.forma{
+   display: flex;
+   margin-top: 10%;
+
+   background-color: #ffffff;
+   width: 200px;
+   height: 60px;
+}
+.strelka{
+
+   height: 60%;
+   margin-top: 5%;
+   margin-right: 2%;
+}
+.dude{
+   margin-top: 30%;
+   padding-left: 2%;
+   font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 2vw;
+line-height: 29px;
+
+color: #FFFFFF;
+}
+.register{
+   margin:right;
+margin-top: 1%;
+   width: 75px;
+   height: 30px;
+   left: 511px;
+   background: #244D4D;
+   color: #ffffff;
+   font-family: 'DM Sans';
+font-style: normal;
+font-weight: 500;
+   font-size: 0.9vw;
+   line-height: 27px;
+   letter-spacing: 0.72px;
+   transition: 0.2s;
+}
+.take-a-hour{
+   padding-left: 9%;
+}
+.footer_cop {
+   padding-top: 1%;
+   background-color: #407980;
+   text-align: center;
+   font-family: 'DM Sans';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 1.8vw;
+   line-height: 33px;
+   text-align: center;
+   letter-spacing: 0.22px;
+   color: #ffffff;
+   padding-bottom: 1%;
+}
+.rovno,.rovno1{
+   padding-left: 5%;
+}
+/*adaptiv*/
+
+
+
+
+
+
+
+
+.preloader {
+   /*фиксированное позиционирование*/
+   position: fixed;
+   /* координаты положения */
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   /* фоновый цвет элемента */
+   background: #e0e0e0;
+   /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+   z-index: 1001;
+ }
+ 
+ 
+
+ 
+ 
+ .loaded_hiding .preloader {
+   transition: 0.6s opacity;
+   opacity: 0;
+ }
+ 
+ .loaded .preloader {
+   display: none;
+ }
+
+
+
+ span1 {
+   display: block;
+   position: absolute;
+   width: 40%;
+   height: 40%;
+   border-radius: 50%;
+   box-shadow: 2px 2px 3px rgba(0,0,0,.4);
+   -webkit-animation: run 2s infinite ease-in-out;
+   animation: run 2s infinite ease-in-out;
+ }
+.eee{
+      width: 100px;
+      height: 100px;
+      transform: translate(-50%, -50%);
+      position: absolute; 
+      top: 50%; 
+      left: 50%;
+    
+}
+ .one {
+   background: #000000;
+   -webkit-animation-delay: 1.5s;
+   animation-delay: 1.5s;
+ }
+ .two {
+    background: #154444;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+ }
+ .three { 
+ background: #407980;
+   -webkit-animation-delay: 0.5s;
+   animation-delay: 0.5s;
+ }
+ .four {
+   background: #F4F6F6;
+ }
+ 
+ @-webkit-keyframes run {
+   0% {
+     transform: translate(0%);
+     border-radius: 50%;
+   }
+   25% {
+     transform: translate(150%) scale(0.5); 
+     border-radius: 0%;
+   }
+   50% {
+     transform: translate(150%, 150%);
+     border-radius: 50%; 
+   }
+   75% {
+     transform: translate(0%, 150%) scale(0.5); 
+     border-radius: 0%;
+   }
+ }
+
+   /*АНИМАЦИЯ*/
+ @keyframes run {
+   0% {
+     transform: translate(0%);
+     border-radius: 50%;
+   }
+   25% {
+     transform: translate(150%) scale(0.5); 
+     border-radius: 0%;
+   }
+   50% {
+     transform: translate(150%, 150%);
+     border-radius: 50%; 
+   }
+   75% {
+     transform: translate(0%, 150%) scale(0.5); 
+     border-radius: 0%;
+   }
+ }
+
+ 
+ body {
+   animation: change-background 4s ease infinite;
+ }
+ .all-cite {   
+    animation: animation-name; 
+ }
+ @keyframes animation-name {   
+   0% {     
+     background-color: rgb(255, 0, 43);   
+   }   
+   50% {     
+     background-color: yellow;   
+   } 
+   100% {
+     background: blue;
+    }
+ }
+
+
+
+
+ 
+  .perenos{
+margin-top: 7%;
+  }
+  
+
+  /*точно надо*/
+  .login-box form a {
+   position: relative;
+   display: inline-block;
+   padding: 20px 20px;
+   color: #ffffff;
+   font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5vw;
+   text-decoration: none;
+   text-transform: uppercase;
+   overflow: hidden;
+   transition: .5s;
+   margin-top: 40px;
+   letter-spacing: 4px
+ }
+ 
+ .login-box a:hover {
+   background: #ffffff;
+   color: #154444;
+   font-family: 'DM Sans';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 1.5vw;
+ 
+ }
+ 
+ .login-box a span {
+   position: absolute;
+   display: block;
+ }
+ 
+ .login-box a span:nth-child(1) {
+   top: 0;
+   left: -100%;
+   width: 100%;
+   height: 2px;
+   background: linear-gradient(90deg, transparent, #ffffff);
+ }
+ 
+ .login-box a span:nth-child(2) {
+   top: -100%;
+   right: 0;
+   width: 2px;
+   height: 100%;
+   background: linear-gradient(180deg, transparent, #ffffff);
+ }
+ 
+ .login-box a span:nth-child(3) {
+   bottom: 0;
+   right: -100%;
+   width: 100%;
+   height: 2px;
+   background: linear-gradient(270deg, transparent, #ffffff);
+ }
+ 
+ 
+ .login-box a span:nth-child(4) {
+   bottom: -100%;
+   left: 0;
+   width: 2px;
+   height: 100%;
+   background: linear-gradient(360deg, transparent, #ffffff);
+ }
+ 
+ /* KEYFRAMES */
+ 
+ @keyframes btn-anim1 {
+   0% {
+     left: -100%;
+   }
+   50%,100% {
+     left: 100%;
+   }
+ }
+ 
+ @keyframes btn-anim2 {
+   0% {
+     top: -100%;
+   }
+   50%,100% {
+     top: 100%;
+   }
+ }
+ 
+ @keyframes btn-anim3 {
+   0% {
+     right: -100%;
+   }
+   50%,100% {
+     right: 100%;
+   }
+ }
+ 
+ @keyframes btn-anim4 {
+   0% {
+     bottom: -100%;
+   }
+   50%,100% {
+     bottom: 100%;
+   }
+ }
+ 
+ /* USING KEYFRAMES */
+ 
+ .login-box a span:nth-child(1) {
+   animation: btn-anim1 1s linear infinite;
+ }
+ 
+ .login-box a span:nth-child(2) {
+   animation: btn-anim2 1s linear infinite;
+   animation-delay: .25s
+ }
+ 
+ .login-box a span:nth-child(3) {
+   animation: btn-anim3 1s linear infinite;
+   animation-delay: .5s
+ }
+ 
+ .login-box a span:nth-child(4) {
+   animation: btn-anim4 1s linear infinite;
+   animation-delay: .75s
+ } 
+ @media screen and (max-width: 1090px) {
+   
+   .frame-8{
+      flex-direction: column;
+      align-items: center; 
+   }
+.rovno{
+   padding-right: 17%;
+   padding-top: 3%;
+}
+
+.rovno1{
+   padding-top: 3%;
+   padding-right: 15%;
+}
+.loremi{
+   padding-left: 0;
+}
+.znachki{
+   padding-bottom: 0;
+}
+   .take{
+      padding-left: 0;
+      padding-top: 2%;
+   
+   }
+   .spisok1{
+      padding-left: 0;
+   }
+   .take1{
+      padding-top: 5%;
+   }
+   .take-a-hour{
+padding-left: 7%;
+padding-bottom: 2%;
+   }
+   .stul{
+    margin-top: 2%;
+    order: 2;
+    width: 80%;
+   }
+   .rect,.niz{
+        flex-direction: column;
+    align-items: center;
+    width: 69%;
+    margin: 0 auto;
+   }
+   .niz{
+      text-align: center;
+      flex-direction: column;
+  align-items: center;
+  width: 69%;
+  margin: 0 auto;
+ }
+ .heart{
+   margin-left: 7%;
+
+ }
+ .frame41,.frame42{
+width: 50%;
+ }
+ .cena{
+   padding-right: 0;
+ }
+   .perenos{
+   
+      width: 90%;
+      order: 1;
+   }
+   .title{
+      margin-top: 10px;
+      font-size: 5vw;
+      line-height: 70px;
+   }
+   .con3{
+
+      padding-top: 5%;
+   }
+/*.white-svan{
+   vertical-align: middle;
+}*/
+   .diller{
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto;
+   }
+   .fraame64,.fraame13,.fraame15,.fraame63 , .fraame14{
+      padding-left: 0;
+      padding-right: 0;
+      margin-top: 2%;
+   }
+   .fraame65{
+      padding-left: 4%;
+      padding-right: 4%;
+   }
+   .jus-drein{
+      flex-direction: column;
+    align-items: center;
+    width: 69%;
+    margin: 0 auto;
+   }
+   .group9009{
+      order: 2;
+    
+   }
+   .our-cust{
+  
+      order: 1;
+   }
+   .our-mini{ text-align: center;}
+   .komnatki{
+      padding-left:0%; 
+   }
+
+   .knopki, .variantiki {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .one-var:hover {
+      -webkit-transform:scale(1.25); /* Safari and Chrome */
+      -moz-transform:scale(1.25); /* Firefox */
+      -ms-transform:scale(1.25); /* IE 9 */
+      -o-transform:scale(1.25); /* Opera */
+       transform:scale(1.25);
+    }
+   .one-var  {
+      -webkit-transition: all 1s ease; /* Safari and Chrome */
+      -moz-transition: all 1s ease; /* Firefox */
+      -ms-transition: all 1s ease; /* IE 9 */
+      -o-transition: all 1s ease; /* Opera */
+      transition: all 1s ease;
+    }
+   .one-var{
+      width: 30%;
+      height: 100%;    
+      margin-top: 2%;
+   }
+   .con3{
+      flex-direction: column;
+      align-items: center;
+
+   }
+   .pop-furniture {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+   }
+  .our-pop-fur{
+   flex-direction: column;
+   align-items: center;
+   padding-left: 0%;
+   padding-top: 4%;
+   padding-right: 0%;
+  }
+  .image-con4{
+   width: 10%;
+   padding-left: 0%;
+   padding-top: 4%;
+   padding-right: 0%;
+  }
+.chuvak{
+   align-items: center;
+   flex-direction: column;
+}
+.rect{
+   width: 85%;
+}
+.login-box form a{
+   margin-top: 30px;
+   font-size: 2.2vw;
+  }
+  .text-frame-1{
+   font-size: 2.5vw;
+  }
+  .ikonki{
+margin-top: 20px;
+   }
+   .best,.sto,.free{
+      font-size: 3vw;
+   }
+   .mini-best,.mini-sto,.mmini-free{
+      font-size: 2.7vw;
+   }
+   .about-us{
+      padding-left: 0%;
+      width: 75%;
+   }
+   .about,.trusted{
+      font-size: 5vw;
+   }
+   .trusted{
+      font-size: 5vw;
+      padding-top: 30px;
+   }
+   .sub{
+      font-size: 5vw;
+   }
+   .all-of{
+      margin-top: 30px;
+      font-size: 3vw;
+   }
+   .lorem{
+      margin-top: 15px;
+      font-size: 2vw;
+   }
+   .group{
+      width: 80%;
+   }
+   /*.raspolog{
+      text-align: left;
+   }*/  
+    .our-pop,.all-furnit{
+      font-size: 5vw;
+      line-height: 70px;
+   }
+   .our{
+      text-align: center;
+      font-size: 5vw;
+      line-height: 50px;
+   }
+   .mini-our-pop{
+      font-size: 3vw;
+   }
+   .room{
+      padding-left: 11%;
+   }
+   .room,.category,.style{
+      font-size: 2.5vw;
+   }
+   .white,.cena,.our-mini{
+      font-size: 3vw;
+   }
+   .one-var{
+      width: 80%;
+   }
+   .heart{
+      margin-left: 42%;
+   }
+   .buy-now{
+      width: 150px;
+      height: 60px;
+      font-size: 1.8vw;
+      line-height: 55px;
+   }
+   .all-furniture{
+      padding-top: 60px;
+   }
+   .group8990{
+      width: 80%;
+   }
+
+   .jus-drein{
+      padding-top: 50px; 
+       width: 80%;
+   }
+}
+
+ @media screen and (max-width: 900px) {
+.frame-7{
+   margin-top: 30px;
+}
+   .text-frame-1{
+      font-size: 3vw;
+margin-top: 20px;
+   }
+   .button-1,.button-2,.button-3{
+font-size: 1.8vw;
+   }
+   .all-of{
+      margin-top: 25px;
+   }
+   .ikonki{
+      margin-top: 30px;
+   }
+   .con4{
+      padding-top: 50px;
+   }
+
+   .about{
+      margin-top: 60px;
+   }
+   .name,.reiting{
+      margin-top: 2px;
+      font-size: 2vw;
+   }
+   .our-cust{
+      padding-top: 0;
+   }
+   .register{
+   font-size: 1.2vw;
+}
+.frame-8{
+   margin-top: -30px;
+}
+.dude,.follow,.take-a-hour,.take,.take1{
+   font-size: 3.5vw;
+}
+.rovno,.rovno1{
+   padding-left: 0;
+}
+.loremi,.spisok1{
+   font-size: 2.5vw;
+}
+
+}
+@media screen and (max-width: 600px) {
+   .register{
+      margin-top: 1.2%;
+   }
+   .email{
+      width: 42%;
+   }
+   input{
+      font-size: 2vw;
+     
+   }
+   .sub{
+      font-size: 4.7vw;
+   }
+   .lorem{
+      font-size: 2.7vw;
+      margin-top: 0;
+   }
+   .forma{
+   width: 170px;
+   height: 40px;
+
+}
+.email{
+   margin-left: 30%;
+}
+.footer_cop{
+   font-size: 2.3vw;
+}
+}
+ @media screen and (max-width: 500px) {
+   input{
+      font-size: 2vw;
+      padding-left: 5px;
+   }
+   .ikonki, .ikonki2, .ikonki3{
+      margin-top: 20px;
+   }
+  .rect{
+   width: 85%;
+  }
+  .login-box form a{
+   margin-top: 10px;
+   font-size: 2.5vw;
+  }
+   .title{
+      line-height: 37px;
+   }
+   
+   .stul{
+      width: 80%; 
+   }
+   .about-us{
+      width: 75%;
+   }
+.one-rjad{
+   flex-direction: column;
+   align-items: center;
+}
+.button-1{
+   margin-left: 0;
+}
+.button-2{
+   margin-left: 0;
+}
+.button-3{
+   margin-left: 0;
+}
+.login-box form a{
+   margin-top: 10px;
+}
+.button-1,.button-2,.button-3{
+   font-size: 2.5vw;
+      }
+.heart{
+   margin-left: 33%;
+}
+.buy-now{
+   width: 150px;
+   height: 60px;
+   font-size: 2.8vw;
+   line-height: 55px;
+}
+.about,.group9009{
+   margin-top: 30px;
+}
+.con4,.all-furniture,.jus-drein{
+   padding-top: 10px;
+}
+.frame-8{
+   margin-top: -125px;
+}
+.dude{
+   margin-top: 10%;
+}
+.spisok1,.loremi{
+   line-height: 15px;
+   font-size: 3vw;
+}
+.rovno,.rovno1{
+   margin-right: 30px;
+}
+}
+/*@media screen and (max-width: 500px) {
+   .our-mini,.lorem,.mini-our-pop,.all-of,.text-frame-1{
+      font-size: 3vw;
+   }
+   input{
+      padding-left: 0;
+   }
+}*/
+@media screen and (min-width: 1870px) {
+.frame-7{
+   height: 600px ;
+}
+.sub,.our,.title{
+   line-height: 80px;
+}
+}
